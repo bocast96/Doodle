@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <ImageButton
+        android:id="@+id/small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="small"
+        android:src="@drawable/small"
+        android:onClick="sizeChange" />
+
+    <ImageButton
+        android:id="@+id/med"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="medium"
+        android:src="@drawable/med"
+        android:onClick="sizeChange"/>
+
+    <ImageButton
+        android:id="@+id/big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="large"
+        android:src="@drawable/big"
+        android:onClick="sizeChange" />
+
+    <ImageButton
+        android:id="@+id/big2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="larger"
+        android:src="@drawable/biger"
+        android:onClick="sizeChange" />
+
+    <ImageButton
+        android:id="@+id/big3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="largest"
+        android:src="@drawable/bigest"
+        android:onClick="sizeChange" />
+</LinearLayout>

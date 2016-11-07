@@ -8,22 +8,138 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#666666"
     tools:context="com.example.boris.doodle.MainActivity">
+
 
     <com.example.boris.doodle.DoodleView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/view" />
+        android:id="@+id/view"
+        android:background="#000000"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/colorButtons"
+        android:layout_above="@+id/funcButtons" />
 
 
-    <Button
-        android:text="Clear"
+    <LinearLayout
+        android:id="@+id/colorButtons"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/button"
-        android:onClick="clearClicked"
-        style="@android:style/Widget.Material.Button.Inset" />
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/funcButtons">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:id="@+id/white"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:onClick="colorChange"
+            android:background="#FFFFFFFF"
+            android:layout_margin="2dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:id="@+id/red"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:onClick="colorChange"
+            android:background="#ff0000"
+            android:layout_margin="2dp"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:id="@+id/black"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:onClick="colorChange"
+            android:background="#000000"
+            android:layout_margin="2dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:id="@+id/green"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:onClick="colorChange"
+            android:background="#00ff00"
+            android:layout_margin="2dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:id="@+id/yellow"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:onClick="colorChange"
+            android:background="#ffee00"
+            android:layout_margin="2dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:id="@+id/blue"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:onClick="colorChange"
+            android:background="#0000ff"
+            android:layout_margin="2dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/funcButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:text="Clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/button"
+            android:onClick="clearClicked"
+            style="@style/Widget.AppCompat.Button.Small"
+             />
+
+        <ImageButton
+            android:id="@+id/brushes"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:contentDescription="Brush sizes"
+            android:src="@drawable/brush2"
+            android:onClick="sizeDialog"
+            />
+
+        <ImageButton
+            android:id="@+id/save"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:contentDescription="save"
+            android:src="@drawable/save2"
+            android:onClick="save"
+            />
+
+    </LinearLayout>
+
+
 </RelativeLayout>

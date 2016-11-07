@@ -8,6 +8,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.PorterDuff;
 import android.util.AttributeSet;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -38,9 +39,11 @@ public class DoodleView extends View {
     }
 
     private void init(AttributeSet attrs, int defStyle){
-        paint.setColor(Color.RED);
+        paint.setColor(Color.WHITE);
         paint.setAntiAlias(true);
         paint.setStyle(Paint.Style.STROKE);
+        float pixels = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics());
+        paint.setStrokeWidth(pixels);
         canvasPaint.setFlags(Paint.DITHER_FLAG);
 
     }
@@ -48,6 +51,16 @@ public class DoodleView extends View {
     public void clear() {
         canvas.drawColor(0, PorterDuff.Mode.CLEAR);
         invalidate();
+    }
+
+    public void changeColor(int color){
+
+        paint.setColor(color);
+    }
+
+    public void setSize(float size) {
+        float pixels = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, size, getResources().getDisplayMetrics());
+        paint.setStrokeWidth(pixels);
     }
 
     @Override
