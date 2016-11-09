@@ -96,6 +96,16 @@
             android:onClick="colorChange"
             android:background="#0000ff"
             android:layout_margin="2dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:id="@+id/brown"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:onClick="colorChange"
+            android:background="#8b6205"
+            android:layout_margin="2dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -107,15 +117,16 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
 
-        <Button
-            android:text="Clear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageButton
+            android:src="@drawable/colors"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:id="@+id/button"
-            android:onClick="clearClicked"
+            android:scaleType="fitCenter"
+            android:id="@+id/picker"
+            android:onClick="colorPicker"
             style="@style/Widget.AppCompat.Button.Small"
-             />
+            />
 
         <ImageButton
             android:id="@+id/brushes"
@@ -137,6 +148,26 @@
             android:contentDescription="save"
             android:src="@drawable/save2"
             android:onClick="save"
+            />
+
+        <ImageButton
+            android:id="@+id/invert"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:contentDescription="inverse background"
+            android:src="@drawable/invert"
+            android:onClick="invertBackground"/>
+
+        <Button
+            android:text="Clear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/button"
+            android:onClick="clearClicked"
+            style="@style/Widget.AppCompat.Button.Small"
             />
 
     </LinearLayout>

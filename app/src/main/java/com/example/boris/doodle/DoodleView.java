@@ -45,7 +45,8 @@ public class DoodleView extends View {
         float pixels = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 10, getResources().getDisplayMetrics());
         paint.setStrokeWidth(pixels);
         canvasPaint.setFlags(Paint.DITHER_FLAG);
-
+        paint.setStrokeCap(Paint.Cap.ROUND);
+        paint.setStrokeJoin(Paint.Join.ROUND);
     }
 
     public void clear() {
@@ -62,6 +63,7 @@ public class DoodleView extends View {
         float pixels = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, size, getResources().getDisplayMetrics());
         paint.setStrokeWidth(pixels);
     }
+
 
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {

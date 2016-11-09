@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/colorPicker">
+
+
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="0.16"
+        />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:layout_gravity="center"
+        android:layout_weight="0.16"
+        android:background="#ffffff"
+        >
+
+        <TextView
+            android:text="  R: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="#ffffff"/>
+
+        <EditText
+            android:text="0"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/redNum"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:inputType="number"
+            android:background="#ffffff"
+            />
+
+        <TextView
+            android:text="  G: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:background="#ffffff"/>
+
+        <SeekBar
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:id="@+id/greenBar"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:max="255"
+            android:progress="1"
+            />
+
+        <EditText
+            android:text="0"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/greenNum"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:inputType="number"
+            android:background="#ffffff"
+            />
+
+        <TextView
+            android:text="  B: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:background="#ffffff"
+            />
+
+        <SeekBar
+            android:layout_width="300dp"
+            android:layout_height="39dp"
+            android:id="@+id/blueBar"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:max="255"
+            android:progress="1"
+            />
+
+        <EditText
+            android:text="0"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/blueNum"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:inputType="number"
+            android:background="#ffffff"
+            />
+
+        <SeekBar
+            android:layout_width="300dp"
+            android:layout_height="44dp"
+            android:id="@+id/redBar"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:max="255"
+            android:progress="1"
+            />
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="0"
+            />
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_column="2"
+            />
+
+        <Button
+            android:text="Choose Color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:id="@+id/button2"
+            android:onClick="confirmColor"
+            android:layout_row="3"
+            android:layout_column="1"/>
+
+    </GridLayout>
+
+</LinearLayout>
